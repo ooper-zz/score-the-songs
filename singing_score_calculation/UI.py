@@ -100,7 +100,7 @@ window.resizable(0,0)
 window.wm_state('zoomed') #默认最大化
 #插入背景图片
 im = Image.open('timg1.jpg')#'C:\\Users\\李方怡\\Desktop\\SLP\\timg1.jpg'
-img = ImageTk.PhotoImage(im.resize((1550,900),Image.ANTIALIAS))
+img = ImageTk.PhotoImage(im.resize((1550,900),Image.LANCZOS))
 imLabel = tk.Label(window,image=img).pack()
 #建立输出文本框
 scroll = tk.Scrollbar()
