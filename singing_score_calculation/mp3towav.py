@@ -2,7 +2,7 @@
 """
 Created on Sat Nov  9 23:55:39 2019
 
-@author: 薛钦亮
+@author: Xue Qinliang
 """
 
 from pydub import AudioSegment
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     import argparse
     import os
     import re
-    #设置参数
+    # Set parameters
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--inputdir", required=True, type=str, help="dirpath to the input the mp3 files")
     ap.add_argument("-o", "--outputdir", required=True, type=str, help="dirpath to output wav files")

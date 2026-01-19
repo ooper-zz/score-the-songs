@@ -5,17 +5,17 @@ Created on Mon Dec 16 19:49:44 2019
 @author: Nicole~
 """
 '''
-任务：
-2. 需要判断是否是间奏，间奏可以不去匹配
-3. midi提取出来的旋律，要找一个好的方式去匹配（确定评分函数）
-4. 和真实的原唱去比较分数，让分数更合理一点
+Tasks:
+2. Need to determine if it's an interlude, interludes can be skipped
+3. For melodies extracted from MIDI, find a good matching method (determine scoring function)
+4. Compare scores with real original vocals to make scores more reasonable
 '''
 
 '''
-实现思路：
-1. music21将midi转换成整数序列
-2. DTW进行打分比对
-******3. 尝试进行动态打分
+Implementation approach:
+1. Use music21 to convert MIDI to integer sequences
+2. Use DTW for scoring comparison
+******3. Try dynamic scoring
 '''
 
 from music21 import *
@@ -30,7 +30,7 @@ import numpy as np
 def GenerateTemplateMidiSequenceFiles():
     filelist=os.listdir(r'..\melody')
     print(filelist)
-    #在每一个文件夹里的每一个文件，都要生成一个序列并且存下来
+    # Generate and save a sequence for each file in each folder
     for midfile in filelist:
 #        midfile = str(i)+'\\'+str(file)
         s = converter.parse('..\melody\\'+midfile)

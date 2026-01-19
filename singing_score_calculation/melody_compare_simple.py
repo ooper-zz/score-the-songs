@@ -15,8 +15,8 @@ import threading
 class SimpleMelodyComparator:
     def __init__(self, root):
         self.root = root
-        self.root.title('Melody Comparison - Suno Validator (Use Pre-Stemmed Files)')
-        self.root.geometry('800x650')
+        self.root.title('Melody Comparison - Suno Validator')
+        self.root.geometry('850x750')
         self.root.configure(bg='#1a1a2e')
         self.root.resizable(True, True)
         
